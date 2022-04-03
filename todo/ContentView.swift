@@ -31,6 +31,9 @@ struct ContentView: View {
                 }.onAppear{
                     todoListVM.populateTodoItems()
                 }
+                .refreshable {
+                    todoListVM.populateTodoItems()
+                }
                 Spacer()
             }.navigationTitle("Todo Application")
             
